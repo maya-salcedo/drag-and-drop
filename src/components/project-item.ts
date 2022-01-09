@@ -1,3 +1,8 @@
+/// <reference path="base-component.ts" />
+/// <reference path="../models/drag-drop.ts" />
+/// <reference path="../models/project.ts" />
+/// <reference path="../decorators/autobind.ts" />
+
 namespace App {
   // ProjectItem Class
   export class ProjectItem
@@ -28,7 +33,7 @@ namespace App {
       event.dataTransfer!.effectAllowed = 'move';
     }
 
-    dragEndHandler(event: DragEvent): void {
+    dragEndHandler(_: DragEvent): void {
       console.log('dragend');
     }
     configure() {
